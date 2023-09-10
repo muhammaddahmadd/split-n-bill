@@ -19,12 +19,6 @@ const initialFriends = [
     image: "https://i.pravatar.cc/48?u=499476",
     balance: 0,
   },
-  {
-    id: 499472,
-    name: "Asfund",
-    image: "https://i.pravatar.cc/48?u=499476",
-    balance: 0,
-  },
 ];
 
 function Button({ children, onClick }) {
@@ -81,6 +75,7 @@ export default function App() {
         <FormSplitBill
           onSplitBill={handlerSplit}
           selectedFriend={selectedFriend}
+          key={selectedFriend.id}
         />
       )}
     </div>
